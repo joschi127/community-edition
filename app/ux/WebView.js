@@ -551,6 +551,10 @@ Ext.define('Rambox.ux.WebView',{
 			// Scroll always to top (bug)
 			js_inject += 'document.body.scrollTop=0;';
 
+			// Desktop Sharing
+			js_inject += 'console.log(\'AAAAAAAAAAAAAAAAAAAAAAAAA window.chrome\', window.chrome)';
+
+
 			// Handles Certificate Errors
 			webview.getWebContents().on('certificate-error', function(event, url, error, certificate, callback) {
 				if ( me.record.get('trust') ) {

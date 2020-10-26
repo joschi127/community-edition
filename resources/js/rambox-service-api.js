@@ -4,6 +4,8 @@
 
 const { ipcRenderer } = require('electron');
 const { ContextMenuBuilder, ContextMenuListener } = require('electron-contextmenu-wrapper');
+require('./browser');
+console.log('=== rambox-service-api.js');
 
 /**
  * Make the Rambox API available via a global "rambox" variable.
